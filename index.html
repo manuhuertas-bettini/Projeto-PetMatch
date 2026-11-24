@@ -13,67 +13,63 @@
 </head>
 <body>
     <div class="hero-wrapper">
-        <div class="forma-azul-hero" aria-hidden="true"></div>
-        <div class="forma-amarela-hero" aria-hidden="true"></div>
-        <header class="navbar-container">
-            <nav class="navbar" aria-label="Menu Principal">
-                <div class="navbar-esquerda">
-                    <a href="#" class="logo-icone" aria-label="PetMatch Início">
-                        <span class="icone-pata-azul">🐾</span>
-                    </a>
-                    <ul class="nav-links">
-                        <li><a href="#" class="ativo">Início</a></li>
-                        <li><a href="#sobre">Sobre nós</a></li>
-                        <li><a href="#nossos-animais">Adotar</a></li>
-                    </ul>
-                </div>
-                <form class="barra-busca" role="search">
-                    <span class="icone-lupa">🔍</span>
+        <header class="navbar">
+            <div class="nav-left">
+                <a href="#" class="logo-circle" aria-label="PetMatch Início">🐾</a>
+                <ul class="nav-links">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#nossos-animais">Adotar</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-center">
+                <form class="search-box" role="search">
+                    <span>🔍</span>
                     <input type="text" placeholder="Busque por nome, espécie ou localização" aria-label="Busque por nome, espécie ou localização">
                 </form>
-                <div class="navbar-acoes">
-                    <button type="button" class="btn-anunciar">Anunciar</button>
-                    <span class="divisor-vertical"></span>
-                    <button type="button" class="btn-entrar">👤 Entrar</button>
-                </div>
-            </nav>
+            </div>
+
+            <div class="nav-right">
+                <button type="button" class="btn-anunciar">Anunciar</button>
+                <span class="nav-divider"></span>
+                <button type="button" class="btn-entrar">👤 Entrar</button>
+            </div>
         </header>
-        <section class="hero-conteudo container">
-            <div class="hero-texto">
-                <div class="badge-boas-vindas">
-                    <span class="badge-icone">🐾</span>
+
+        <section class="hero-container">
+            <div class="hero-text">
+                <div class="welcome-badge">
+                    <span class="badge-icon">🐾</span>
                     <span>BEM-VINDO AO PETMATCH</span>
                 </div>
                 <h1>
-                    Adote <span class="destaque-laranja">amor.</span><br>
-                    Espalhe <span class="destaque-amarelo">felicidade.</span>
+                    Adote <span class="text-orange">amor.</span><br>
+                    Espalhe <span class="text-yellow">felicidade.</span>
                 </h1>
-                <p class="hero-subtitulo">
+                <p>
                     Conectamos pets que precisam de um lar com pessoas que querem transformar vidas.
                 </p>
-                <a href="#nossos-animais" class="btn-hero-adotar">
-                    <span class="icone-pata-branca">🐾</span> Quero adotar
+                <a href="#nossos-animais" class="btn-cta">
+                    <span class="cta-icon">🐾</span> Quero adotar
                 </a>
             </div>
-            <div class="hero-visual">
-                <img 
-                    src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=700&q=80" 
-                    alt="Cachorro Golden e gato sorrindo juntos" 
-                    class="hero-pets-img"
-                >
-                <aside id="sobre" class="card-o-que-fazemos">
-                    <div class="card-cabecalho">
-                        <span class="icone-pata-azul">🐾</span>
-                        <h2>O QUE FAZEMOS?</h2>
+
+            <aside id="sobre" class="floating-card">
+                <div class="card-header">
+                    <span class="card-paw">🐾</span>
+                    <div class="card-title-group">
+                        <h3>O QUE FAZEMOS?</h3>
+                        <span class="title-underline"></span>
                     </div>
-                    <p>
-                        Nosso objetivo é conectar o pet certo à família certa, tornando a adoção mais fácil e criando histórias felizes.
-                    </p>
-                    <a href="#nossos-animais" class="btn-ver-pets">
-                        Ver pets <span>&rarr;</span>
-                    </a>
-                </aside>
-            </div>
+                </div>
+                <p>
+                    Nosso objetivo é conectar o pet certo à família certa, tornando a adoção mais fácil e criando histórias felizes.
+                </p>
+                <a href="#nossos-animais" class="btn-ver-pets">
+                    Ver pets <span>&rarr;</span>
+                </a>
+            </aside>
         </section>
     </div>
     <main>
