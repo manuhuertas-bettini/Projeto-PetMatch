@@ -1,0 +1,234 @@
+﻿@{ Layout = null; }
+@using Projeto_PetMatch_MVC.Models
+@model List<animai>
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetMatch - Adote amor. Espalhe felicidade.</title>
+    <link rel="stylesheet" href="~/css/global.css">
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="secao-destaque">
+        <header class="barra-navegacao">
+            <div class="navegacao-esquerda">
+                <a href="#" class="logo-circulo" aria-label="PetMatch Início">
+                    <span class="icone-svg patinha" aria-hidden="true"></span>
+                </a>
+                <ul class="links-navegacao">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#nossos-animais">Adotar</a></li>
+                </ul>
+            </div>
+            <div class="navegacao-centro">
+                <form class="caixa-busca" role="search">
+                    <span class="icone-svg busca" aria-hidden="true"></span>
+                    <input type="text" placeholder="Busque por nome, espécie ou localização"
+                        aria-label="Busque por nome, espécie ou localização">
+                </form>
+            </div>
+            <div class="navegacao-direita">
+                <button type="button" class="botao-anunciar">Anunciar</button>
+                <span class="divisor-navegacao" aria-hidden="true"></span>
+                <button type="button" class="botao-entrar">
+                    <span class="icone-svg entrar" aria-hidden="true"></span>
+                    Entrar
+                </button>
+            </div>
+        </header>
+        <section class="conteudo-destaque">
+            <div class="texto-destaque">
+                <div class="selo-boas-vindas">
+                    <span class="icone-selo">
+                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                    </span>
+                    <span>BEM-VINDO AO PETMATCH</span>
+                </div>
+                <h1>
+                    Adote <span class="texto-laranja">amor.</span><br>
+                    Espalhe <span class="texto-amarelo">felicidade.</span>
+                </h1>
+                <p>
+                    Conectamos pets que precisam de um lar com pessoas que querem transformar vidas.
+                </p>
+                <a href="#nossos-animais" class="botao-chamada">
+                    <span class="icone-chamada">
+                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                    </span>
+                    Quero adotar
+                </a>
+            </div>
+            <aside id="sobre" class="cartao-flutuante">
+                <div class="cabecalho-cartao">
+                    <span class="pata-cartao">
+                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                    </span>
+                    <div class="grupo-titulo-cartao">
+                        <h3>O QUE FAZEMOS?</h3>
+                        <span class="sublinhado-titulo"></span>
+                    </div>
+                </div>
+                <p>
+                    Nosso objetivo é conectar o pet certo à família certa, tornando a adoção mais fácil e criando
+                    histórias felizes.
+                </p>
+                <a href="#nossos-animais" class="botao-ver-pets">
+                    Ver pets <span aria-hidden="true">&rarr;</span>
+                </a>
+            </aside>
+        </section>
+    </div>
+    <main>
+        <section id="nossos-animais" class="secao-animais">
+            <div class="conteiner">
+                <h2 class="titulo-secao">Nossos animais</h2>
+                <div class="envoltorio-carrossel">
+                    <div class="grade-animais">
+                        <!-- Card 1: Max -->
+                        <article class="cartao-pet">
+                            <div class="foto-cartao">
+                                <span class="etiqueta-adocao">Adoção</span>
+                                <img src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=600&q=80"
+                                    alt="Max - Cachorro">
+                            </div>
+                            <div class="info-cartao">
+                                <h3>🐶 Max - Cachorro - 2 anos</h3>
+                                <p class="descricao-pet">
+                                    Max é carinhoso, brincalhão e adora passear! Está procurando uma família amorosa
+                                    para chamar de sua. ❤️
+                                </p>
+                                <div class="rodape-info-cartao">
+                                    <ul class="status-pet">
+                                        <li>📍 São Paulo, SP</li>
+                                        <li>✓ Vacinado</li>
+                                        <li>🏠 Pronto para adoção</li>
+                                    </ul>
+                                    <a href="#nossos-animais" class="botao-cartao-adotar">
+                                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                                        Quero adotar
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Card 2: Tigresa -->
+                        <article class="cartao-pet">
+                            <div class="foto-cartao">
+                                <span class="etiqueta-adocao">Adoção</span>
+                                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80"
+                                    alt="Tigresa - Gata">
+                            </div>
+                            <div class="info-cartao">
+                                <h3>🐱 Tigresa - Gata • 2 meses</h3>
+                                <p class="descricao-pet">
+                                    Tigresa é carinhosa e adora brincar! Está procurando uma família amorosa para chamar
+                                    de sua. ❤️
+                                </p>
+                                <div class="rodape-info-cartao">
+                                    <ul class="status-pet">
+                                        <li>📍 São Paulo, SP</li>
+                                        <li>✓ Vacinada</li>
+                                        <li>🏠 Pronto para adoção</li>
+                                    </ul>
+                                    <a href="#nossos-animais" class="botao-cartao-adotar">
+                                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                                        Quero adotar
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Card 3: Pandora -->
+                        <article class="cartao-pet">
+                            <div class="foto-cartao">
+                                <span class="etiqueta-adocao">Adoção</span>
+                                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=600&q=80"
+                                    alt="Pandora - Cachorra">
+                            </div>
+                            <div class="info-cartao">
+                                <h3>🐶 Pandora - Cachorra - 4 meses</h3>
+                                <p class="descricao-pet">
+                                    Pandora adora passear, é carinhosa e brincalhona! Está procurando uma família
+                                    amorosa para chamar de sua. ❤️
+                                </p>
+                                <div class="rodape-info-cartao">
+                                    <ul class="status-pet">
+                                        <li>📍 São Paulo, SP</li>
+                                        <li>✓ Vacinada</li>
+                                        <li>🏠 Pronto para adoção</li>
+                                    </ul>
+                                    <a href="#nossos-animais" class="botao-cartao-adotar">
+                                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                                        Quero adotar
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <button type="button" class="seta-carrossel" aria-label="Próximos animais">&#8250;</button>
+                </div>
+                <div class="paginacao">
+                    <div class="controles-paginacao">
+                        <button type="button" class="seta-paginacao" aria-label="Página anterior">&lsaquo;</button>
+                        <span class="numero-paginacao ativo">1</span>
+                        <button type="button" class="seta-paginacao" aria-label="Próxima página">&rsaquo;</button>
+                    </div>
+                    <p class="texto-paginacao">Mostrando 3 por página</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="conteiner grade-rodape">
+            <div class="marca-rodape">
+                <div class="logo-rodape">
+                    <span class="icone-pata-azul">
+                        <span class="icone-svg patinha" aria-hidden="true"></span>
+                    </span>
+                    <div>
+                        <strong>Pet<span>Match</span></strong>
+                        <small>Conectando corações,<span>mudando vidas 💛</span></small>
+                    </div>
+                </div>
+                <p class="frase-destaque-rodape">
+                    Conectando corações,<br>
+                    <strong>transformando vidas.</strong>
+                </p>
+                <p class="descricao-rodape">
+                    Acreditamos que todo pet merece um lar cheio de amor. Adote, cuide e faça a diferença! 💛
+                </p>
+            </div>
+            <div class="coluna-rodape">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#nossos-animais">Nossos animais</a></li>
+                    <li><a href="#">Como adotar</a></li>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="coluna-rodape">
+                <h4>Ajude</h4>
+                <ul>
+                    <li><a href="#">Faça uma doação</a></li>
+                    <li><a href="#">Seja um apoiador</a></li>
+                    <li><a href="#">Seja um voluntário</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="conteiner rodape-inferior">
+            <p>© 2026 PetMatch. Todos os direitos reservados.</p>
+            <span></span>
+            <div class="links-legais-rodape">
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Cookies</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

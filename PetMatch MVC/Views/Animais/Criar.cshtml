@@ -1,0 +1,174 @@
+@using Projeto_PetMatch_MVC.Models
+@model animai
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anunciar Pet - PetMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/global.css">
+    <style>
+        .pagina-form {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 24px;
+        }
+        .card-form {
+            background: #fff;
+            padding: 40px;
+            border-radius: 28px;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 18px 40px rgba(16,36,66,0.12);
+        }
+        .card-form h2 {
+            color: var(--azul-marinho-escuro);
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .card-form p {
+            color: var(--texto-cinza);
+            font-size: 0.88rem;
+            margin-bottom: 22px;
+        }
+        .linha-dupla {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .campo {
+            margin-bottom: 15px;
+        }
+        .campo label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .campo input, .campo select, .campo textarea {
+            width: 100%;
+            padding: 11px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 14px;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+        .campo textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .campo-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .campo-check input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--laranja-primario);
+        }
+        .erro-msg {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 10px 14px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 25px;
+            background: var(--laranja-primario);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            margin-top: 6px;
+        }
+        .btn-submit:hover {
+            background: var(--laranja-hover);
+        }
+        .link-rodape-form {
+            text-align: center;
+            margin-top: 18px;
+            font-size: 0.85rem;
+        }
+        .link-rodape-form a {
+            color: var(--azul-primario);
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagina-form">
+        <div class="card-form">
+            <h2>Anunciar um pet 🐾</h2>
+            <p>Preencha as informações abaixo para encontrar um lar cheio de amor.</p>
+
+            @if (ViewBag.Erro != null)
+            {
+                <div class="erro-msg">@ViewBag.Erro</div>
+            }
+
+            <form method="post" action="/Animais/Criar">
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label>Nome do pet</label>
+                        <input type="text" name="nome" required placeholder="Ex: Thor">
+                    </div>
+                    <div class="campo">
+                        <label>Espécie</label>
+                        <select name="especie" required>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="linha-dupla">
+                    <div class="campo">
+                        <label>Idade aproximada</label>
+                        <input type="text" name="idade" required placeholder="Ex: 2 anos ou 6 meses">
+                    </div>
+                    <div class="campo">
+                        <label>Localização (Cidade/UF)</label>
+                        <input type="text" name="localizacao" required placeholder="Ex: São Paulo - SP">
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label>Link da foto (URL)</label>
+                    <input type="url" name="foto_url" required placeholder="https://exemplo.com/foto-do-pet.jpg">
+                </div>
+
+                <div class="campo">
+                    <label>Descrição / Personalidade</label>
+                    <textarea name="descricao" required placeholder="Conte um pouco sobre o temperamento, porte e história do animal..."></textarea>
+                </div>
+
+                <div class="campo-check">
+                    <input type="checkbox" id="vacinado" name="vacinado" value="true">
+                    <label for="vacinado" style="margin:0;">O pet já está vacinado</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Publicar anúncio</button>
+            </form>
+
+            <div class="link-rodape-form">
+                <a href="/">← Voltar para a vitrine</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

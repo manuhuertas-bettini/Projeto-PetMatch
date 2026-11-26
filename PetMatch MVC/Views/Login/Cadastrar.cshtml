@@ -1,0 +1,61 @@
+@using Projeto_PetMatch_MVC.Models
+@model usuario
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Conta - PetMatch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/global.css">
+    <style>
+        .pagina-form { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+        .card-form { background: #fff; padding: 40px; border-radius: 28px; width: 100%; max-width: 440px; box-shadow: 0 18px 40px rgba(16,36,66,0.12); }
+        .card-form h2 { color: var(--azul-marinho-escuro); font-weight: 800; margin-bottom: 8px; }
+        .campo { margin-bottom: 14px; }
+        .campo label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 5px; }
+        .campo input { width: 100%; padding: 11px 15px; border: 1px solid #cbd5e1; border-radius: 14px; font-size: 0.9rem; }
+        .erro-msg { background: #fee2e2; color: #b91c1c; padding: 10px 14px; border-radius: 12px; font-size: 0.85rem; margin-bottom: 16px; }
+        .btn-submit { width: 100%; padding: 13px; border: none; border-radius: 25px; background: var(--laranja-primario); color: #fff; font-weight: 600; font-size: 0.95rem; cursor: pointer; margin-top: 8px; }
+        .link-rodape-form { text-align: center; margin-top: 18px; font-size: 0.85rem; }
+        .link-rodape-form a { color: var(--azul-primario); font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="pagina-form">
+        <div class="card-form">
+            <h2>Crie sua conta</h2>
+            <p style="color:var(--texto-cinza); font-size:0.85rem; margin-bottom:20px;">Junte-se ao PetMatch para transformar vidas.</p>
+
+            @if (ViewBag.Erro != null)
+            {
+                <div class="erro-msg">@ViewBag.Erro</div>
+            }
+
+            <form method="post" action="/Login/Cadastrar">
+                <div class="campo">
+                    <label>Nome completo</label>
+                    <input type="text" name="nome" required placeholder="Ex: Mariana Silva">
+                </div>
+                <div class="campo">
+                    <label>E-mail</label>
+                    <input type="email" name="email" required placeholder="seu@email.com">
+                </div>
+                <div class="campo">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" name="telefone" placeholder="(11) 99999-9999">
+                </div>
+                <div class="campo">
+                    <label>Senha</label>
+                    <input type="password" name="senha" required placeholder="Crie uma senha">
+                </div>
+                <button type="submit" class="btn-submit">Criar conta</button>
+            </form>
+
+            <div class="link-rodape-form">
+                Já tem conta? <a href="/Login/Login">Fazer login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
